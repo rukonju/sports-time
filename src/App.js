@@ -8,6 +8,7 @@ import Footer from './Footer/Footer';
 import AllSports from './components/AllSports/AllSports';
 import EngTeams from './components/EngTeams/EngTeams';
 import LaTeams from './components/LaTeams/LaTeams';
+import Details from './components/Details/Details';
 
 
 function App() {
@@ -25,8 +26,11 @@ function App() {
           <Route path='/all_sports'>
             <AllSports></AllSports>
           </Route>
-          <Route path='/english_league'>
+          <Route exact path='/english_league'>
             <EngTeams></EngTeams>
+          </Route>
+          <Route exact path="/english_league/:teamId">
+            <Details></Details>
           </Route>
           <Route path='/la_liga'>
             <LaTeams></LaTeams>

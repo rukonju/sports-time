@@ -1,8 +1,9 @@
 import React from 'react';
 import { Facebook, Youtube, Twitter} from 'react-bootstrap-icons';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const EngTeam = (props) => {
-    const {strTeam,strLeague,strFacebook,strDescriptionEN,strInstagram,strStadium,strStadiumDescription,strStadiumLocation,strStadiumThumb,strTeamBadge,strTeamBanner,strTwitter,strWebsite,strYoutube}=props.team;
+    const {idTeam,strTeam,strFacebook, strTeamBanner,strTwitter,strWebsite,strYoutube}=props.team;
     return (
         <Col>
             <Card>
@@ -15,9 +16,11 @@ const EngTeam = (props) => {
                         <a className="text-decoration-none m-3 " href={strYoutube}  target="_black"> <Youtube/> </a>
                         <a className="text-decoration-none m-3 " href={strFacebook} target="_black"><Facebook/> </a>
                         <div data-aos="fade-up" className="d-grid gap-2 my-4">
-                    <Button variant="secondary" size="lg">See All Laliga Teams</Button>
-                </div>
-                    </div>
+                        <Link to={`/english_league/${idTeam}`}>
+                            <Button variant="secondary" size="lg"> Details</Button>
+                        </Link>
+                        </div>
+                        </div>
                 </Card.Body>
             </Card>
         </Col>

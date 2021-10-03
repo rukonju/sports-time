@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 const useTeams=(url)=>{
    const [teams,setTeams]= useState([])
@@ -7,7 +7,7 @@ const useTeams=(url)=>{
        .then(res=>res.json())
        .then(data=>setTeams(data.teams))
    },[url])
-   console.log(teams)
+   
    return [teams]
 }
 export default useTeams;

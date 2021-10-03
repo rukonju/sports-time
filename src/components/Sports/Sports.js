@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useSports from '../../hooks/useSports';
 import Sport from '../Sport/Sport';
 
@@ -14,7 +15,10 @@ const Sports = () => {
                     }
                 </Row>
                 <div data-aos="fade-up" className="d-grid gap-2 my-4">
-                    <Button variant="secondary" size="lg">See All Sports</Button>
+                    <Link to="/all_sports">
+                        <Button variant="secondary" size="lg">See All Sports</Button>
+                    </Link>
+                    
                 </div>
             </Container>
     
