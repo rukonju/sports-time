@@ -10,6 +10,9 @@
 .nav a:hover{
     border-bottom: 4px solid black;
 }
+.nav a:active{
+    border-bottom: 4px solid black;
+}
 .nav{
     margin: auto;
 }

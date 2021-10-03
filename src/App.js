@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './Footer/Footer';
+import AllSports from './components/AllSports/AllSports';
+import EngTeams from './components/EngTeams/EngTeams';
+import LaTeams from './components/LaTeams/LaTeams';
 
 
 function App() {
@@ -19,14 +22,14 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route>
-            <Home></Home>
+          <Route path='/all_sports'>
+            <AllSports></AllSports>
           </Route>
-          <Route>
-            <Home></Home>
+          <Route path='/english_league'>
+            <EngTeams></EngTeams>
           </Route>
-          <Route>
-            <Home></Home>
+          <Route path='/la_liga'>
+            <LaTeams></LaTeams>
           </Route>
         </Switch>
         <Footer></Footer>      

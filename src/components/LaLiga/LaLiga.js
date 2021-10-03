@@ -4,7 +4,7 @@ import useTeams from '../../hooks/useTeams';
 import LaLigaHome from '../LaligaHome/LaLigaHome';
 
 const LaLiga = () => {
-    const [teams]=useTeams();
+    const [teams]=useTeams('https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?s=Soccer&c=Spain');
     
     console.log(teams)
     return (
